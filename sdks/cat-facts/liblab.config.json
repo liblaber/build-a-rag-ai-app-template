@@ -1,0 +1,31 @@
+{
+  "sdkName": "CatFacts",
+  "specFilePath": "https://catfact.ninja/docs/api-docs.json",
+  "languages": [
+    "csharp"
+  ],
+  // The API spec doesn't define the servers, so we need to provide the base URL
+  "baseUrl": "https://catfact.ninja",
+  "languageOptions": {
+    "csharp": {
+      "packageId": "liblab.Examples.CatFacts",
+      "liblabVersion": "2",
+      "sdkVersion": "0.0.1"
+    }
+  },
+  // The Cat Facts API spec has some warnings that we can ignore
+  "validationsToIgnore": [
+    {
+      "code": "oas3-api-servers"
+    },
+    {
+      "code": "info-contact"
+    },
+    {
+      "code": "info-description"
+    },
+    {
+      "code": "operation-tag-defined"
+    }
+  ]
+}
