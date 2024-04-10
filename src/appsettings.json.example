@@ -1,7 +1,6 @@
 {
   "OpenAI": {
     "Key": "",
-    "ChatModel": "gpt-4",
-    "ImageModel": "dall-e-3"
+    "ChatModel": "gpt-4"
   }
 }

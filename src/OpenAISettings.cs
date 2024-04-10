@@ -3,7 +3,7 @@ namespace  RagWithSDKs;
 /// <summary>
 /// Represents the settings for OpenAI.
 /// This includes your API key - https://platform.openai.com/api-keys
-/// And the models you want to use for chat and image completion -https://platform.openai.com/docs/models
+/// And the model you want to use for chat completion -https://platform.openai.com/docs/models
 /// </summary>
 public class OpenAISettings
 {
@@ -16,9 +16,4 @@ public class OpenAISettings
     /// Gets or sets the chat model for OpenAI.
     /// </summary>
     public required string ChatModel { get; set; }
-
-    /// <summary>
-    /// Gets or sets the image model for OpenAI.
-    /// </summary>
-    public required string ImageModel { get; set; }
 }

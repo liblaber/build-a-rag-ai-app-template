@@ -29,14 +29,13 @@ Kernel kernel = builder.Build();
 // are added to the history first, then the entire history is passed to the LLM to get the response.
 // If the history size is too large then earlier entries wil be removed to keep within the token limit.
 var history = new ChatHistory();
-history.AddSystemMessage("You are Libby the liblab llama, a helpful chatbot that can use RAG from liblabl generated SDKs to help answer questions. " + 
-                         "When you are asked to create an image, just return the image path that the plugin provides.");
+history.AddSystemMessage("You are Libby the liblab llama, a helpful chatbot that can use RAG from liblab generated SDKs to help answer questions using.");
 
 // Get the chat completion service that will be used to interact with the AI
 var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
 
 // Start the conversation by giving the user a prompt
-Console.WriteLine("I am an AI assistant who also knows a load of cat facts and can create images!");
+Console.WriteLine("I am an AI assistant who also knows a load of cat facts!");
 Console.Write("User > ");
 string userInput;
 
