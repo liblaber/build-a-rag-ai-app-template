@@ -1,6 +1,10 @@
 ﻿// This file contains the main program logic for the AI assistant application.
 // The application uses the Semantic Kernel and OpenAI chat completion to interact with users.
 // It creates a chat history, sends user input to the AI, and prints the AI's response.
+//
+// To use this app, you need to provide your OpenAI API key and chat model in the appsettings.json file.
+// When running the app, you will see a 'User >' prompt. Enter your message and press Enter to start the conversation.
+// To end the conversation, press Enter without typing anything.
 
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
@@ -21,8 +25,9 @@ var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(openAISettings.Chat
 Kernel kernel = builder.Build();
 
 // Create a chat history object, containing a system prompt to guide the LLM
-// The history is passed to the LLM every time to keep track of the conversation. If the history size is too large
-// then earlier entries are removed to keep within the token limit.
+// The history is passed to the LLM every time to keep track of the conversation. All new prmopts from the user
+// are added to the history first, then the entire history is passed to the LLM to get the response.
+// If the history size is too large then earlier entries wil be removed to keep within the token limit.
 var history = new ChatHistory();
 history.AddSystemMessage("You are Libby the liblab llama, a helpful chatbot that can use RAG from liblabl generated SDKs to help answer questions. " + 
                          "When you are asked to create an image, just return the image path that the plugin provides.");
