@@ -15,5 +15,6 @@
 				"remcohaszing.schemastore"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "npm install -g liblab",
 }

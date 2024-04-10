@@ -9,7 +9,6 @@
   "languageOptions": {
     "csharp": {
       "packageId": "liblab.Examples.CatFacts",
-      "liblabVersion": "2",
       "sdkVersion": "0.0.1"
     }
   },

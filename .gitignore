@@ -398,6 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 .DS_Store
 src/appsettings.json
-.mono/registry/CurrentUser/software/microsoft/csdevkit/v1/pids/3124_133571858984663001/values.xml
-.mono/registry/CurrentUser/software/microsoft/csdevkit/telemetry/persistentpropertybag/microsoft.visualstudio.code.servicehost/values.xml
-.mono/registry/CurrentUser/software/microsoft/csdevkit/v1/pids/25444_133572417711558087/values.xml
+.mono/
+output/
